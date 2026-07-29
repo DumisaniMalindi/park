@@ -4,7 +4,7 @@ function Gate({ isOpen }) {
   return (
     <div className="gate-container">
 
-      <h2>🚧 Smart Parking Gate</h2>
+      <h2> Smart Parking Gate</h2>
 
       <div className="traffic-light">
         <div className={`light red ${!isOpen ? "active" : ""}`}></div>

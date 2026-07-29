@@ -46,7 +46,7 @@
 
     border:none;
 
-    background:#2563EB;
+    background:#000000;
 
     color:white;
 
@@ -64,7 +64,7 @@
 
 .upload-card button:hover{
 
-    background:#1D4ED8;
+    background:#886d3a;
 
 }
 .preview-image{

@@ -116,7 +116,7 @@ function UploadCard({ title, buttonText, onUpload }) {
             className="preview-image"
           />
         ) : (
-          <p>📷 No image selected</p>
+          <p> No Vehicle image selected</p>
         )}
 
         <input
@@ -130,7 +130,7 @@ function UploadCard({ title, buttonText, onUpload }) {
         {uploadedFile && (
             <div className="plate-info">
                 <p>
-                📁 Uploaded:
+                Uploaded:
                 <strong>{uploadedFile}</strong>
                 </p>
             </div>
@@ -138,13 +138,13 @@ function UploadCard({ title, buttonText, onUpload }) {
 
       {uploading && (
         <div className="plate-info">
-          <h3>☁ Uploading image...</h3>
+          <h3>Uploading image...</h3>
         </div>
       )}
 
       {processing && (
         <div className="plate-info">
-          <h3>🤖 Processing image...</h3>
+          <h3>Processing image...</h3>
           <p>Reading license plate...</p>
         </div>
       )}

@@ -94,27 +94,27 @@ function Dashboard() {
         <div className="stats-grid">
 
           <StatsCard
-            title="🚗 Active Vehicles"
+            title=" Active Vehicles"
             value={activeVehicles}
-            color="#2563EB"
+            color="#0a0a0a"
           />
 
           <StatsCard
-            title="💰 Revenue"
+            title=" Revenue"
             value={`R${revenue}`}
-            color="#16A34A"
+            color="#0b0e0c"
           />
 
           <StatsCard
-            title="🅿 Available Spaces"
+            title=" Available Spaces"
             value={availableSpaces}
-            color="#EA580C"
+            color="#110f0e"
           />
 
           <StatsCard
-            title="📅 Today's Entries"
+            title=" Today's Entries"
             value={todayEntries}
-            color="#9333EA"
+            color="#101011"
           />
 
         </div>
@@ -122,13 +122,13 @@ function Dashboard() {
         <div className="upload-grid">
 
           <UploadCard
-            title="🚗 Vehicle Entry"
+            title="Vehicle Entry"
             buttonText="Upload Entry Image"
             onUpload={handleEntryUpload}
           />
 
           <UploadCard
-            title="🚙 Vehicle Exit"
+            title=" Vehicle Exit"
             buttonText="Upload Exit Image"
             onUpload={handleExitUpload}
           />
@@ -165,7 +165,17 @@ function Dashboard() {
                     <td>{session.exit}</td>
                     <td>{session.duration}</td>
                     <td>{session.fee}</td>
-                    <td>{session.status}</td>
+                    <td>
+                        <span
+                            className={
+                            session.status === "Active"
+                                ? "status-active"
+                                : "status-completed"
+                            }
+                        >
+                            {session.status}
+                        </span>
+                        </td>
                   </tr>
 
                 ))}

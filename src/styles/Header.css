@@ -1,45 +1,51 @@
 .header{
+    background:#0F172A;
+    color:white;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    background:#0F172A;
-    color:white;
-
-    padding:20px 40px;
+    padding:25px 40px;
 
     box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:18px;
+.header-left h1{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:6px;
 }
 
-.car{
-    font-size:48px;
-}
-
-.logo h1{
-    margin:0;
-    font-size:30px;
-}
-
-.logo p{
-    margin-top:4px;
+.header-left p{
     color:#CBD5E1;
+    font-size:14px;
 }
 
-.datetime{
+.header-right{
     text-align:right;
 }
 
-.datetime h3{
-    margin:0;
+.status{
+    background:#16A34A;
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+    font-weight:600;
+
+    display:inline-block;
+
+    margin-bottom:10px;
 }
 
-.datetime p{
-    margin-top:5px;
+.header-right h3{
+    margin-bottom:4px;
+}
+
+.header-right p{
     color:#CBD5E1;
 }

@@ -4,24 +4,26 @@ function Header() {
   const today = new Date();
 
   const date = today.toLocaleDateString();
-
   const time = today.toLocaleTimeString();
 
   return (
     <header className="header">
 
-      <div className="logo">
+      <div className="header-left">
 
-        <span className="car">🚗</span>
+        <h1>Smart Parking Management System</h1>
 
-        <div>
-          <h1>Smart Ticketless Parking</h1>
-          <p>AI Powered Parking Management System</p>
-        </div>
+        <p>
+          Vehicle Entry, Exit and Registration Monitoring
+        </p>
 
       </div>
 
-      <div className="datetime">
+      <div className="header-right">
+
+        <div className="status">
+          ● System Online
+        </div>
 
         <h3>{date}</h3>
 
