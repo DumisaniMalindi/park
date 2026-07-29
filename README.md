@@ -1,16 +1,50 @@
-# React + Vite
+Parking Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview
+A cloud-based parking management system that detects vehicle registration numbers from uploaded images using AWS services.
 
-Currently, two official plugins are available:
+Features
+- Vehicle image upload
+- Number plate detection
+- Amazon S3 image storage
+- Amazon Rekognition OCR
+- React frontend
+- AWS Lambda backend
+- API Gateway integration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Architecture
 
-## React Compiler
+React Frontend
+↓
+API Gateway
+↓
+AWS Lambda
+↓
+Amazon S3
+↓
+Amazon Rekognition
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- Python
+- AWS Lambda
+- Amazon API Gateway
+- Amazon S3
+- Amazon Rekognition
+- CloudWatch
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+How It Works
+
+1. User uploads vehicle image
+2. React converts image to Base64
+3. API Gateway receives request
+4. Lambda processes image
+5. Image stored in S3
+6. Rekognition extracts text
+7. Regex identifies plate number
+8. Result returned to user
+
+
+Dumisani Malindi
