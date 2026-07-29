@@ -1,0 +1,45 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#0F172A;
+    color:white;
+
+    padding:20px 40px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.car{
+    font-size:48px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:30px;
+}
+
+.logo p{
+    margin-top:4px;
+    color:#CBD5E1;
+}
+
+.datetime{
+    text-align:right;
+}
+
+.datetime h3{
+    margin:0;
+}
+
+.datetime p{
+    margin-top:5px;
+    color:#CBD5E1;
+}
