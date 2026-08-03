@@ -18,6 +18,8 @@ React Frontend
 ↓
 API Gateway
 ↓
+NAT Gateway
+↓
 AWS Lambda
 ↓
 Amazon S3
