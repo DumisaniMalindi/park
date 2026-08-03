@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "../components/Header";
 import StatsCard from "../components/StatsCard";
@@ -22,6 +22,28 @@ function Dashboard() {
 
   // Activity Log
   const [logs, setLogs] = useState([]);
+
+  const loadDashboard = async () => {
+    try {
+      const response = await fetch(
+        "https://fcbkhejhqe.execute-api.us-west-1.amazonaws.com/default"
+      );
+
+      const data = await response.json();
+
+      setActiveVehicles(data.activeVehicles);
+      setRevenue(data.revenue);
+      setTodayEntries(data.todayEntries);
+      setSessions(data.sessions);
+
+    } catch (error) {
+      console.error("Dashboard Load Error:", error);
+    }
+  };
+
+  useEffect(() => {
+    loadDashboard();
+  }, []);
 
   // Entry Upload
   const handleEntryUpload = (plate) => {
@@ -51,6 +73,10 @@ function Dashboard() {
     setTimeout(() => {
       setGateOpen(false);
     }, 3000);
+    setTimeout(() => {
+      loadDashboard();
+    }, 3000);
+
   };
 
   // Exit Upload
@@ -83,7 +109,13 @@ function Dashboard() {
     setTimeout(() => {
       setGateOpen(false);
     }, 3000);
+    setTimeout(() => {
+      loadDashboard();
+    }, 3000);
+
   };
+
+  
 
   return (
     <>
